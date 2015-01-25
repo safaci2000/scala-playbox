@@ -1,0 +1,10 @@
+language: java        
+
+jdk:
+  - oraclejdk7
+
+script: mvn test javadoc:javadoc 
+
+notifications:
+  email:
+    - dev@esamir.com
