@@ -71,7 +71,6 @@ object HelloWorld {
     //prepend an element and return a new list.
     val modifiedList = 1 :: list
 
-    modifiedList.foreach(f=> println(f))
 //    for (i <- 0 to modifiedList.length - 1) {
 //        print(s"${modifiedList(i)} ")
 //    }
@@ -82,7 +81,29 @@ object HelloWorld {
     print("\n")
     print( mergedList.count(p => p == 7  )  )
 
-
+    mergedList.foreach(f=> println(f))
+    //Removes duplicates, sorts and prints.
+    mergedList.distinct.sortWith((s, t) => s < t ).
+      foreach(i => print(s"${i} "))
+    //Tuples
+    val pair = (5, "Hi")
+    print(s"\n${pair}\n")
+    println(pair._1)
+    println(pair._2)
+    //Set
+   var aSet = Set(5, 2,9)
+    print(s"\n${aSet}\n")
+    aSet  += 42
+    print(aSet.contains(42))
+    val mutableSet = scala.collection.mutable.Set(5,2,9)
+    print(s"\n${mutableSet}\n")
+    mutableSet += 42
+    print(mutableSet.contains(42))
+    //map
+    val aMap = Map("first" -> 1,  "second" ->2)
+    print(aMap)
+    print(aMap.apply("first"))
+//    print(aMap.apply("ffffirst"))
   }
 
 
